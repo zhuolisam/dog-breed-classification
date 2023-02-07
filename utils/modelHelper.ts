@@ -38,7 +38,7 @@ async function runInference(
   //Get the softmax of the output data. The softmax transforms values to be between 0 and 1
   var outputSoftmax = softmax(Array.prototype.slice.call(output.data));
 
-  console.log('wtf-> ', outputSoftmax)
+  // console.log('wtf-> ', outputSoftmax)
   // Get the class name from the class_names array.
   var [propMax, propMaxIndex] = argMax(outputSoftmax);
   var result = class_names[propMaxIndex];

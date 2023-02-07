@@ -143,8 +143,9 @@ export default function Home() {
                       probability: probs,
                       time: inferenceTime,
                     });
-                  })();
-                  setAfterPredict('after');
+                  })().then(() => {
+                    setAfterPredict('after');
+                  });
                 }
               }}
               className="w-full px-6 py-4 mt-10 font-bold text-white bg-yellow-700 border rounded-md hover:bg-amber-800 disabled:bg-gray-200 transition"
